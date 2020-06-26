@@ -12,19 +12,11 @@
 
 - le produit : une mini trousse avec le collier, le manuel d'utilisation, clé allen, dragonne, cable, adaptateur. 
 
-**1.  Le COLLIER**
+## 1.  Le COLLIER
 
 ![collier](https://user-images.githubusercontent.com/37441518/85844797-9d031a80-b7a3-11ea-8f35-d7946d3c39d0.JPG)
 
-1. **Composante** : </br>
-
--  Collier en nylon ajustable pour un tour de cou allant jusqu'à 70 cm
-
-- PRISE DE CHARGE (située à l'arrière)
-
-- RECHERCHE POUR GPS : indique que le système portatif tente de localiser le signal GPS.
-
-2. **Caractéristique  :**
+## 2. Caractéristique  :
 
 - Interrupteur marche/arrêt pour allonger l'autonomie de la batterie
 
@@ -36,15 +28,20 @@
 
 - Capteurs de sons et vibrations Perfect Bark™ : seuls les aboiements de votre chien provoquent la stimulation, ainsi le stress qui peut resentir.
 
-- **L'APPLICATION**  **Do0ogFit**
+## - L'APPLICATION  **Do0ogFit**
 
 - Voici 3 images exemples de l'application qui sera créée :  
 <img src="https://github.com/mbelala/IOT/blob/master/application/accueil.PNG" width="250" /><img src="https://github.com/mbelala/IOT/blob/master/application/histo_repas.PNG" width="250" /><img src="https://github.com/mbelala/IOT/blob/master/application/rassurer_mon_chien.PNG" width="250" />
 
 
 
-**3.  Tinkercad**
+## 3.  Tinkercad
 
 Lien du Tinkercad: https://www.tinkercad.com/things/04eStbwhBkL-swanky-waasa/editel?sharecode=ME6cqpK3tBEvkP4woR5JJM26MQwJbvO6z_dlUD_uqwU
 
 <img src="https://github.com/mbelala/IOT/blob/master/images/Trinker_on.png"/>
+
+**Liste des composants :**
+Accéléromètre et gyroscope : nécessaire pour détecter les mouvements et suivi du sommeil.
+
+
