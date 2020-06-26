@@ -38,7 +38,7 @@
 
 - **L'APPLICATION**  **Do0ogFit**
 
-- Voici 3 images exemples de l'application qui sera créée :
-![accueil](https://github.com/mbelala/IOT/blob/master/application/accueil.PNG)
-![historique_repas](https://github.com/mbelala/IOT/blob/master/application/histo_repas.PNG)
-![rassurer_mon_chien](https://github.com/mbelala/IOT/blob/master/application/rassurer_mon_chien.PNG)
+- Voici 3 images exemples de l'application qui sera créée :\
+![accueil](https://github.com/mbelala/IOT/blob/master/application/accueil.PNG | width=250)
+![historique_repas](https://github.com/mbelala/IOT/blob/master/application/histo_repas.PNG | width=250)
+![rassurer_mon_chien](https://github.com/mbelala/IOT/blob/master/application/rassurer_mon_chien.PNG | width=250)
