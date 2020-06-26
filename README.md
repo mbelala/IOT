@@ -36,8 +36,9 @@
 
 - Capteurs de sons et vibrations Perfect Bark™ : seuls les aboiements de votre chien provoquent la stimulation, ainsi le stress qui peut resentir.
 
-- **L'APPLICATION**  **Do0ogFit application**
-![application](https://user-images.githubusercontent.com/37441518/85845388-75f91880-b7a4-11ea-95fe-dde497821580.JPG)
+- **L'APPLICATION**  **Do0ogFit**
 
-- Systems d’exploitation :  application[ IOs](https://github.com/DISIC/guide-mobile_app_dev_natif/blob/master/ios.md), [Android. ](https://github.com/DISIC/guide-mobile_app_dev_natif/blob/master/android.md):
-
+- Voici 3 images exemples de l'application qui sera créée :
+![accueil](https://github.com/mbelala/IOT/blob/master/application/accueil.PNG)
+![historique_repas](https://github.com/mbelala/IOT/blob/master/application/histo_repas.PNG)
+![rassurer_mon_chien](https://github.com/mbelala/IOT/blob/master/application/rassurer_mon_chien.PNG)
