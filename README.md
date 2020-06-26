@@ -41,7 +41,13 @@ Lien du Tinkercad: https://www.tinkercad.com/things/04eStbwhBkL-swanky-waasa/edi
 
 <img src="https://github.com/mbelala/IOT/blob/master/images/Trinker_on.png"/>
 
-**Liste des composants :**
-Accéléromètre et gyroscope : nécessaire pour détecter les mouvements et suivi du sommeil.
+**Liste des composants :**  
+Accéléromètre et gyroscope : nécessaire pour détecter les mouvements et suivi du sommeil.  
+Capteur pulsation du coeur (<a href="https://www.amazon.fr/ICQUANZX-capteur-dimpulsions-Cardiaque-fr%C3%A9quence/dp/B07VJ9XB7T/">Lien exemple</a>)
+Puce GPS (<a href="https://www.amazon.fr/AZDelivery-NEO-6M-module-GPS-identique/dp/B01N38EMBF/">Lien exemple</a>): nécessaire pour relever la position du chien
+Capteur de températeur (**TMP36** sur Tinkercad) : Relève la température du chien  
+Capteur RFID (<a href"https://www.amazon.fr/Kongnijiwa-S%C3%A9rie-522-Porte-cl%C3%A9s-Compatible-Raspberry/dp/B07JFSL42L/">lien exemple</a>)
+Outil générateur de pulsation éléctrique à faire maison pour envoyer des légers court-circuit au chien : Permet de dresser ou corriger le chien
+Moteur vibration (**Vibration motor** sur Tinkercad) : Envoie des vibration afin de calmer le chien
 
 
