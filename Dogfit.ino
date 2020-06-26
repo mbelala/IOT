@@ -13,29 +13,37 @@ float temps = 500;
 //variable de calcul du temps de fonctionnement du buzzer
 float duree = 0;
 float frequenc = 120;
+// adresse du Vibreur (PIN) 
 int vibreur = 12;
+// seuil de température fixer
 int baselineTemp = 40;
+//initialisation de variables
 int celsius = 0;
 String demande = "";
+// adresse du capteur de gaz (PIN) 
 int detecteur = A2;
+// seuil de gaz dans l'air fixer
 int niveau_senseur = 250;
+// adresse du led rouge (PIN) 
 int pin_led_rouge = 7;
 bool gaz = false;
-
+// adresse du lcd (PIN) 
 LiquidCrystal lcd(10, 9, 8, 6, 5, 3);
 
 void setup() {
-
+// Initialisation des composants  
   pinMode(BUZZER_PIN, OUTPUT);
   pinMode(Bp1, INPUT);
   digitalWrite(Bp1, HIGH);
   pinMode(detecteur, INPUT);
   pinMode(pin_led_rouge, OUTPUT);
   pinMode(A0, INPUT);
-  Serial.begin(9600);
-
   pinMode(vibreur, OUTPUT);
-
+  
+ // taille du serial
+  Serial.begin(9600);
+  
+//initialisation de l'écran LCD et affichage du nom de l'application 
   lcd.begin(20, 2);
   lcd.setCursor(0,0);
   lcd.print("DogFit");
@@ -44,9 +52,9 @@ void setup() {
 
 void loop() {
   
-
+// récupération de la valeur du détécteur
   int valeur_detecteur = analogRead(detecteur);
-
+// Si la présence de gaz est supérieur au seuil fixer (niveau_senceur) on fait clignoter le led rouge et affiche un message sur l'écran LCD
   if (valeur_detecteur >= niveau_senseur) {
     digitalWrite(pin_led_rouge, HIGH);
     lcd.setCursor(0,1);
@@ -56,23 +64,27 @@ void loop() {
   	lcd.display();
     gaz = true;
     
-  } else if (valeur_detecteur < niveau_senseur && gaz) {
+  } 
+  //sinon éteindre la led rouge et effacer le message sur l'écran LED
+  else if (valeur_detecteur < niveau_senseur && gaz) {
     digitalWrite(pin_led_rouge, LOW);
     lcd.setCursor(0,1);
     lcd.print("                 ");
     gaz = false;
   }
-
+// Récupération et calcul de la température en C° 
   celsius = map(((analogRead(A0) - 20) * 3.04), 0, 1023, -40, 125);
 
+// si la température est inférieure au seuil fixer à 40 le vibreur ne s'active pas sinon il s'active pour calmer le chien 
   if (celsius < baselineTemp) {
     digitalWrite(vibreur, LOW);
   } else {
     digitalWrite(vibreur, HIGH);
   }
 
+ // Récupération de l'état du bouton
   appui_bp1 = digitalRead(Bp1);
-
+// si le bouton est appuyer on allume le buzzer le temps de la 
   if (appui_bp1 == LOW) {
     duree = 0;
     float frequenc;
@@ -84,22 +96,30 @@ void loop() {
       duree = duree + 2 * demi_periode;
     }
   }
-
+// commande sur le moniteur série
+// vérification qu'une information à été prise en entrée
   if (Serial.available() > 0) {
     
     demande = Serial.readString();
     Serial.print("I received:");
     Serial.println(demande);
+ // Action "Temp" affiche la température du chien 
 
     if (demande == "Temp") {
       lcd.setCursor(0,1);
       lcd.print(celsius);
       lcd.setCursor(2,1);
-      lcd.print("C.           ");
-    } else if (demande == "Loc") {
+      lcd.print("C.             ");
+    } 
+// Action "Loc" envoie la localisation du chien 
+
+    else if (demande == "Loc") {
       lcd.setCursor(0,1);
       lcd.print("Maison            ");
-    } else if (demande == "Calm") {
+    } 
+// Action "Calm" Active le vibreur pour calmer le chien 
+    
+    else if (demande == "Calm") {
       lcd.setCursor(0,1);
       digitalWrite(vibreur, HIGH);
       delayMicroseconds(demi_periode);
